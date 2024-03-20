@@ -894,11 +894,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 68d8f180-9e27-4824-a383-1333ee815421
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: BachelorsProject
+  organizationId: epelix01
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
