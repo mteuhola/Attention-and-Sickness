@@ -6,6 +6,8 @@ TagManager:
   tags:
   - pickaxeHead
   - stone
+  - Enemy
+  - ore
   layers:
   - Default
   - TransparentFX
