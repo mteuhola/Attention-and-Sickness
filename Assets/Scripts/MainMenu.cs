@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void Play()
+    public void PlayLevelOne()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
+    }
+    
+    public void OpenSsq()
+    {
+        SceneManager.LoadScene(2);
     }
 
     // Update is called once per frame

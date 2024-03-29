@@ -3,20 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - pickaxeHead
-  - stone
-  - Enemy
-  - ore
-  - HUD
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Tools
+  - 
   - Water
   - UI
-  - Rig
+  - 
   - 
   - 
   - 

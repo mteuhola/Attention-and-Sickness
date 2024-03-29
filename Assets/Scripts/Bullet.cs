@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public GunShoot gunShoot;
 
-    void OnDestroy()
+    private void OnDestroy()
     {
         if (gunShoot != null)
         {
