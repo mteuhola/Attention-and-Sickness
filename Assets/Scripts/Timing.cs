@@ -36,6 +36,7 @@ public class Timing : MonoBehaviour
             flashRange++;
             float flashDelay = Random.Range(flashDelayMin, flashDelayMax);
             yield return new WaitForSeconds(flashDelay);
+            flashValue = 1;
             flashing.text = "O";
             
 
@@ -50,7 +51,7 @@ public class Timing : MonoBehaviour
                 flashRange = 0f;
                 flashValue = 2;
             }
-            
+            Debug.Log(flashValue);
             yield return null;
         }
     }
@@ -59,7 +60,6 @@ public class Timing : MonoBehaviour
     {
         yield return new WaitForSeconds(lightOnTime);
         flashing.text = "";
-        flashValue = 1;
     }
 
       private void OnEnable()

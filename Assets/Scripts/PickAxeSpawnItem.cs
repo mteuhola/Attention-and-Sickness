@@ -18,6 +18,10 @@ public int pickHitCount = 0;
             Instantiate(itemPrefab, transform.position, transform.rotation);
             pickHitCount++;
         }
+        if (pickHitCount == 5){
+            Destroy(other.gameObject);
+            pickHitCount = 0;
+        }
     }
     void Start(){
         pickSound = GetComponent<AudioSource>();

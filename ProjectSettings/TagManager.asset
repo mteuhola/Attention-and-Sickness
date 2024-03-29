@@ -8,14 +8,15 @@ TagManager:
   - stone
   - Enemy
   - ore
+  - HUD
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Tools
   - Water
   - UI
-  - 
+  - Rig
   - 
   - 
   - 
