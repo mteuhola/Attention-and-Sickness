@@ -18,7 +18,6 @@ public class ChangeMaterial : MonoBehaviour
             // Change the material to the new material
             rend = other.GetComponent<Renderer>();
             rend.material = newMaterial;
-            Debug.Log("toimii");
         }
     }
 

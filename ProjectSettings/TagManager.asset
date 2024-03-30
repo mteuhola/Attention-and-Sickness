@@ -3,16 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - pickaxeHead
+  - ore
+  - Bullet
+  - Enemy
+  - stone
+  - Enemy Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Prop
   - Water
   - UI
-  - 
-  - 
+  - Tool
+  - Body
   - 
   - 
   - 
