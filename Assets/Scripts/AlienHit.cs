@@ -24,12 +24,9 @@ public class AlienHit : MonoBehaviour
     {
         if (collision.collider.tag == "Bullet")
         {
+            hitSound.Play();
             hitPoints -= 10;
-            if (hitPoints > 0) 
-            {
-                hitSound.Play();
-            }
-            else
+            if (hitPoints <= 0) 
             {
                 Destroy(gameObject);
             }
