@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class AlienHit : MonoBehaviour
 {
-    public int hitPoints, moveSpeed, shotPower;
+    public int hitPoints, moveSpeed, shotPower, damage = 5;
 
-    public AudioSource hitSound;
+    public AudioSource hitSound, shootSound;
 
     public float sightRange, attackRange, shotTimer, destroyTimer;
 
@@ -19,13 +19,17 @@ public class AlienHit : MonoBehaviour
     public LayerMask playerLayer;
 
     public GameObject enemyBullet;
+
+    public OreCounter oreCounter;
+
+    public OreCollect oreCollect;
     
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "Bullet")
         {
             hitSound.Play();
-            hitPoints -= 10;
+            hitPoints -= damage + oreCollect.oreCount;
             if (hitPoints <= 0) 
             {
                 Destroy(gameObject);
@@ -64,6 +68,7 @@ public class AlienHit : MonoBehaviour
             var bullet = Instantiate(enemyBullet, shootPoint.transform.position, shootPoint.transform.rotation);
             bullet.GetComponent<Rigidbody>().AddForce(shootPoint.transform.up * shotPower);
             
+            shootSound.Play();
             Destroy(bullet, destroyTimer);
 
             _alreadyAttacked = true;
@@ -74,5 +79,10 @@ public class AlienHit : MonoBehaviour
     private void ResetAttack()
     {
         _alreadyAttacked = false;
+    }
+
+    private void OnDestroy()
+    {
+        oreCounter.AddKill();
     }
 }

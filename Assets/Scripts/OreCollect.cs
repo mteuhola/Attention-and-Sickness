@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class OreCollect : MonoBehaviour
 {
-    public static int oreCount = 0;
+    public int oreCount = 0;
   
  
     public void oreCollect(){

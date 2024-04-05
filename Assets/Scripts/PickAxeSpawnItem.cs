@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class PickAxeSpawnItem : MonoBehaviour
 {
-public GameObject itemPrefab;
-public AudioSource pickSound;
-public int pickHitCount = 0;
+    public OreCollect oreCollect;
+    public GameObject itemPrefab;
+    public AudioSource pickSound;
+    public int pickHitCount = 0;
+    public float destroyTime = 2f;
 
   private void OnCollisionEnter(Collision other)
     {
         // Check if the collision is with an asteroid
         if (other.gameObject.tag == "stone")
         {
+            Debug.Log("Hit");
             pickSound.Play();
             // Spawn the item prefab at the collision point
-            Instantiate(itemPrefab, transform.position, transform.rotation);
+            GameObject moonStone = Instantiate(itemPrefab, transform.position, transform.rotation);
             pickHitCount++;
+            Destroy(moonStone, destroyTime);
+            oreCollect.oreCount++;
         }
         if (pickHitCount == 5){
             Destroy(other.gameObject);
