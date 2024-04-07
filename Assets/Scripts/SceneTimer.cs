@@ -7,7 +7,7 @@ public class SceneTimer : MonoBehaviour
     // Start is called before the first frame update
 
     // Time elapsed in the current scene
-    private float currentTime = 0f;
+    public float currentTime = 0f;
     private bool timerRunning = false;
 
     // Start is called before the first frame update
@@ -25,7 +25,6 @@ public class SceneTimer : MonoBehaviour
         if (timerRunning)
         {
             currentTime += Time.deltaTime;
-            Debug.Log(currentTime);
         }
     }
 }

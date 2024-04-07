@@ -12,7 +12,7 @@ public class TimingRecorder : MonoBehaviour
     private bool isChecked = false;
     private float startTime;
     private bool isRed;
-    
+    public SceneTimer timer;
     
     void Start()
     {
@@ -35,7 +35,7 @@ public class TimingRecorder : MonoBehaviour
         {
             isChecked = true;
             isRed = true;
-            float runtime = Time.time - startTime;
+            float runtime = timer.currentTime;
             
             String timeString = runtime.ToString("F2", CultureInfo.InvariantCulture);
             using (StreamWriter writer = File.AppendText(filePath))
@@ -46,7 +46,7 @@ public class TimingRecorder : MonoBehaviour
         if (timing.flashValue == 3 && isRed){
 
             isRed = false;
-            float runtime = Time.time - startTime;
+            float runtime = timer.currentTime;
             String timeString = runtime.ToString("F2", CultureInfo.InvariantCulture);
             using (StreamWriter writer = File.AppendText(filePath))
             {
