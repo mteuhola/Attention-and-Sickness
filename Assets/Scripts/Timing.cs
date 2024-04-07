@@ -51,7 +51,6 @@ public class Timing : MonoBehaviour
                 flashRange = 0f;
                 flashValue = 2;
             }
-            Debug.Log(flashValue);
             yield return null;
         }
     }
@@ -77,6 +76,7 @@ public class Timing : MonoBehaviour
     {
         if (lightEvent)
         {
+            flashValue = 3;
             StopCoroutine(LightOnEvent());
             lightEvent = false;
             flashing.text = "";
