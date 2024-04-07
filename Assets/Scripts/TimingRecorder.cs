@@ -16,9 +16,9 @@ public class TimingRecorder : MonoBehaviour
     
     void Start()
     {
-        startTime = Time.time;
+        startTime = Time.timeSinceLevelLoad;
         CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
-        filePath = "/Downloads/TimingRecords.csv";
+        //filePath = "/Downloads/TimingRecords.csv";
         if (!File.Exists(filePath))
         {
             File.Create(filePath).Dispose();

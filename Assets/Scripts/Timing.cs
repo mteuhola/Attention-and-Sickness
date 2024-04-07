@@ -50,6 +50,7 @@ public class Timing : MonoBehaviour
                 flashing.color = Color.red;
                 flashRange = 0f;
                 flashValue = 2;
+                Debug.Log(flashValue);
             }
             yield return null;
         }
@@ -77,6 +78,7 @@ public class Timing : MonoBehaviour
         if (lightEvent)
         {
             flashValue = 3;
+            Debug.Log(flashValue);
             StopCoroutine(LightOnEvent());
             lightEvent = false;
             flashing.text = "";

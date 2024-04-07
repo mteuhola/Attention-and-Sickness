@@ -12,13 +12,13 @@ public class AlienHit : MonoBehaviour
 
     public float sightRange, attackRange, shotTimer, destroyTimer;
 
-    public Transform player, shootPoint;
+    public Transform player, shootPoint, alienBody;
 
     private bool _playerInSight, _playerInRange, _alreadyAttacked;
 
     public LayerMask playerLayer;
 
-    public GameObject enemyBullet;
+    public GameObject enemyBullet, deathEffect;
 
     public OreCounter oreCounter;
 
@@ -83,6 +83,9 @@ public class AlienHit : MonoBehaviour
 
     private void OnDestroy()
     {
+        hitSound.Play();
         oreCounter.AddKill();
+        if(!gameObject.scene.isLoaded) return;
+        Instantiate(deathEffect, alienBody.position, alienBody.rotation);
     }
 }

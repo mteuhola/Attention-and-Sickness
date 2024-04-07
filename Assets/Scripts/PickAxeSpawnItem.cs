@@ -15,7 +15,6 @@ public class PickAxeSpawnItem : MonoBehaviour
         // Check if the collision is with an asteroid
         if (other.gameObject.tag == "stone")
         {
-            Debug.Log("Hit");
             pickSound.Play();
             // Spawn the item prefab at the collision point
             GameObject moonStone = Instantiate(itemPrefab, transform.position, transform.rotation);

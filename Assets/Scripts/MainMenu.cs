@@ -30,9 +30,19 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
     
+    public void PlayLevelTwo()
+    {
+        SceneManager.LoadScene(4);
+    }
+    
     public void OpenSsq()
     {
         SceneManager.LoadScene(2);
+    }
+    
+    public void PlayTutorial()
+    {
+        SceneManager.LoadScene(3);
     }
 
     // Update is called once per frame
