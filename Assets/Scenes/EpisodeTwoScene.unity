@@ -5683,7 +5683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timing: {fileID: 1063042530}
-  filePath: C:\Users\Markus\AppData\LocalLow\DefaultCompany\AstroPad Adventures\TimingRecords.csv
+  filePath: 
 --- !u!1001 &1065092708
 PrefabInstance:
   m_ObjectHideFlags: 0
