@@ -44,6 +44,11 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+    
+    public void PlayBaseline()
+    {
+        SceneManager.LoadScene(5);
+    }
 
     // Update is called once per frame
     public void Quit()
