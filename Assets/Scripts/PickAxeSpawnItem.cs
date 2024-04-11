@@ -7,6 +7,7 @@ public class PickAxeSpawnItem : MonoBehaviour
     public OreCollect oreCollect;
     public GameObject itemPrefab;
     public AudioSource pickSound;
+    public Transform spawnPosition;
     public int pickHitCount = 0;
     public float destroyTime = 2f;
 
@@ -17,7 +18,7 @@ public class PickAxeSpawnItem : MonoBehaviour
         {
             pickSound.Play();
             // Spawn the item prefab at the collision point
-            GameObject moonStone = Instantiate(itemPrefab, transform.position, transform.rotation);
+            var moonStone = Instantiate(itemPrefab, spawnPosition.position, spawnPosition.rotation);
             pickHitCount++;
             Destroy(moonStone, destroyTime);
             oreCollect.oreCount++;
@@ -27,7 +28,7 @@ public class PickAxeSpawnItem : MonoBehaviour
             pickHitCount = 0;
         }
     }
-    void Start(){
+    private void Start(){
         pickSound = GetComponent<AudioSource>();
     }
 }

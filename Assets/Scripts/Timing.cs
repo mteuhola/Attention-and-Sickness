@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
 
@@ -12,13 +10,13 @@ public class Timing : MonoBehaviour
     public float flashDelayMin = 9.0f;
     public float flashDelayMax = 12.0f;
     public float lightOnTime = 2.0f;
-    public bool lightEvent = false;
+    public bool lightEvent;
     public int flashValue;
     public float redFlashMin = 10f;
     public float redFlashMax = 20f;
     public float redFlashRange;
     public float flashRange;
-    public bool isRed = false;
+    public bool isRed;
 
     void Start()
     {

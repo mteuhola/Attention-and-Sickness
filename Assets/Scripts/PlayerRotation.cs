@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerRotation : MonoBehaviour
 {
     // Rotation speed in degrees per second
-    public float rotationSpeed = 90f;
+    public float rotationSpeed;
 
     public int minRotateTime = 15;
     public int maxRotateTime = 25;
     
     public int rotationDirection = 1;
+    public int rotationRounds = 1;
 
     private float degreesRotated;
     private bool isRotating;
@@ -39,6 +40,7 @@ public class PlayerRotation : MonoBehaviour
         
         // Randomly determine rotation direction
         rotationDirection = Random.Range(0, 2) == 0 ? 1 : -1; // 1 for forward, -1 for backward
+        rotationRounds = Random.Range(1, 3);  // 1 for one round, 2 for two rounds
     }
 
     private void RotateObject()
@@ -53,7 +55,7 @@ public class PlayerRotation : MonoBehaviour
         degreesRotated += rotationAmount;
 
         // Check if one full rotation has been completed
-        if (Mathf.Abs(degreesRotated) >= 360f)
+        if (Mathf.Abs(degreesRotated) >= rotationRounds * 360f)
         {
             // Reset rotation variables
             degreesRotated = 0f;
