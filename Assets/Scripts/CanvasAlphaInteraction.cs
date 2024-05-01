@@ -15,8 +15,8 @@ public class CanvasAlphaInteraction : MonoBehaviour
     
         private void Update()
         {
-            // Check if the alpha value is less than 1
-            if (_canvasGroup.alpha < 1)
+            // Check if the alpha value is 0
+            if (_canvasGroup.alpha == 0)
             {
                 // If so, set interactability to false
                 _canvasGroup.interactable = false;
@@ -30,8 +30,8 @@ public class CanvasAlphaInteraction : MonoBehaviour
     
         private void UpdateInteractability()
         {
-            // Check if the alpha value is less than 1
-            if (_canvasGroup.alpha < 1)
+            // Check if the alpha value is 0
+            if (_canvasGroup.alpha == 0)
             {
                 // If so, set interactability to false
                 _canvasGroup.interactable = false;

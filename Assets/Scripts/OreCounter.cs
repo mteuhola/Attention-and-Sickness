@@ -19,7 +19,7 @@ public class OreCounter : MonoBehaviour
     void Update()
     {
         oreCountText.text = "Moonstones: " + oreCollect.oreCount + "/" + moonstoneMax + "\nAliens shot: " + killCount + "/" + killMax;
-        if (oreCollect.oreCount == moonstoneMax && killCount == killMax)
+        if (oreCollect.oreCount >= moonstoneMax && killCount == killMax)
         {
             levelCompleteText.SetActive(true);
             locomotionSystem.SetActive(false);

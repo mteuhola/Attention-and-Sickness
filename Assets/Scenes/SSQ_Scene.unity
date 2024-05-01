@@ -1371,12 +1371,12 @@ PrefabInstance:
     - target: {fileID: 2892696200120750877, guid: f41184db03bf00543b8d64c4fc69d02a,
         type: 3}
       propertyPath: 'prompts.Array.data[0]'
-      value: Diziness (eyes open)
+      value: Dizziness (eyes open)
       objectReference: {fileID: 0}
     - target: {fileID: 2892696200120750877, guid: f41184db03bf00543b8d64c4fc69d02a,
         type: 3}
       propertyPath: 'prompts.Array.data[1]'
-      value: Diziness (eyes closed)
+      value: Dizziness (eyes closed)
       objectReference: {fileID: 0}
     - target: {fileID: 2892696200120750877, guid: f41184db03bf00543b8d64c4fc69d02a,
         type: 3}

@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Timing : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Timing : MonoBehaviour
     public float redFlashRange;
     public float flashRange;
     public bool isRed;
+    public ActionBasedContinuousMoveProvider moveProvider;
+    public UpDownMovement upDownSystem;
 
     void Start()
     {
@@ -82,6 +85,11 @@ public class Timing : MonoBehaviour
             flashing.text = "";
             flashing.color = Color.white;
             isRed = false;
+            if (moveProvider != null && upDownSystem != null)
+            {
+                moveProvider.moveSpeed = 8;
+                upDownSystem.moveSpeed = 4;
+            }
             StartCoroutine(FlashRoutine());
         }
         else {

@@ -11,7 +11,7 @@ public class CanvasGroupAlphaChanger : MonoBehaviour
 
     public Image borderImage;
 
-    private float currentAlpha, targetAlpha, timer;
+    private float currentAlpha, targetAlpha, timer, redTimer;
 
     void Start()
     {
@@ -26,10 +26,23 @@ public class CanvasGroupAlphaChanger : MonoBehaviour
         if (timing.isRed)
         {
             borderImage.color = Color.red;
+            redTimer += Time.deltaTime;
         }
         else
         {
             borderImage.color = Color.white;
+            redTimer = 0f;
+        }
+
+        if (redTimer >= 5f)
+        {
+            canvasGroup.alpha = 1;
+            if (timing.moveProvider != null && timing.upDownSystem != null)
+            {
+                timing.moveProvider.moveSpeed = 0;
+                timing.upDownSystem.moveSpeed = 0;
+            }
+            return;
         }
         // Update the timer
         timer += Time.deltaTime;
@@ -45,6 +58,15 @@ public class CanvasGroupAlphaChanger : MonoBehaviour
 
         // Apply the new alpha value to the CanvasGroup
         canvasGroup.alpha = newAlpha;
+
+        if (canvasGroup.alpha == 0)
+        {
+            fadeDuration = 0.1f;
+        }
+        else if (canvasGroup.alpha >= 1f)
+        {
+            fadeDuration = 1.5f;
+        }
 
         // If the lerping is done, swap the target and current alpha values
         if (normalizedTime >= 1f)

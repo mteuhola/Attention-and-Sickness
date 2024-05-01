@@ -1567,7 +1567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 1049289963}
-  m_MoveSpeed: 10
+  m_MoveSpeed: 0
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 0
@@ -1936,7 +1936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1049289962
 Transform:
   m_ObjectHideFlags: 0
@@ -2006,7 +2006,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38877582}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 383f905155da8384495457d685e3fb25, type: 3}
   m_Name: 
@@ -2050,6 +2050,8 @@ MonoBehaviour:
   redFlashRange: 0
   flashRange: 0
   isRed: 0
+  moveProvider: {fileID: 789949989}
+  upDownSystem: {fileID: 1597329570}
 --- !u!114 &1063042537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3293,7 +3295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveAction: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  moveSpeed: 3
+  moveSpeed: 0
   buttonPressed: 0
   buttonPressed1: 0
 --- !u!1 &1598132753
@@ -5396,12 +5398,12 @@ PrefabInstance:
     - target: {fileID: 6543021222683040314, guid: d76426fa43cfd4d4ba75fe4dbff7df32,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 6543021222683040314, guid: d76426fa43cfd4d4ba75fe4dbff7df32,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 6
+      value: 6.4
       objectReference: {fileID: 0}
     - target: {fileID: 6543021222683040314, guid: d76426fa43cfd4d4ba75fe4dbff7df32,
         type: 3}
@@ -5411,13 +5413,23 @@ PrefabInstance:
     - target: {fileID: 6543021222683040314, guid: d76426fa43cfd4d4ba75fe4dbff7df32,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -35
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 7471170065837422342, guid: d76426fa43cfd4d4ba75fe4dbff7df32,
         type: 3}
       propertyPath: timing
       value: 
       objectReference: {fileID: 1063042530}
+    - target: {fileID: 7471170065837422342, guid: d76426fa43cfd4d4ba75fe4dbff7df32,
+        type: 3}
+      propertyPath: fadeDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679686219144475511, guid: d76426fa43cfd4d4ba75fe4dbff7df32,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8449018871764056574, guid: d76426fa43cfd4d4ba75fe4dbff7df32,
         type: 3}
       propertyPath: m_Sprite
