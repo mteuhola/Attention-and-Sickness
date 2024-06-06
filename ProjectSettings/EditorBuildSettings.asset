@@ -11,8 +11,23 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EpisodeOneScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/SSQ_Scene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: ae56e320ec5a96f44a85d5c4332b566d
+  - enabled: 1
+    path: Assets/Scenes/EpisodeTwoScene.unity
+    guid: 34b7e2a114cf66f43a6a92ca351f0252
+  - enabled: 1
+    path: Assets/Scenes/BaselineScene.unity
+    guid: e215e3275fca82946a94091b5a5828eb
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: fb80983a5147c1645941f3f5a5aacdd9,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b06f9bf7ec56e7545a757a06585db2bc,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 3930ab2e8e85e1e4da6a08a163882e16,
       type: 2}
+  m_UseUCBPForAssetBundles: 0
